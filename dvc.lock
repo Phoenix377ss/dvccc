@@ -5,7 +5,7 @@ stages:
     deps:
     - path: configs/trial_1.yaml
       hash: md5
-      md5: b24a330dd5325a0eab55dba7dd1611dc
+      md5: 3540d72dd11f87901144dfd236025d74
       size: 103
     - path: data/initial_data/target.csv
       hash: md5
@@ -22,9 +22,9 @@ stages:
     outs:
     - path: metrics/metrics.json
       hash: md5
-      md5: 70a7be5486dc0baf51a4445a59e7afdd
-      size: 121
+      md5: b19bf62c67eeb6caf15f3d9205c51470
+      size: 118
     - path: models/linear_model.pkl
       hash: md5
-      md5: 9b225e6e65cc1bc4587699e1643e8a84
+      md5: d953cff8a50184f7ffbed4e546b4142f
       size: 746
