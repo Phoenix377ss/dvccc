@@ -1,0 +1,13 @@
+stages:
+  train_model:
+    cmd: python src/train/training.py --config configs/trial_1.yaml
+    deps:
+    - configs/trial_1.yaml
+    - data/initial_data/target.csv
+    - data/prepared_data/prepared_data.csv
+    - src/train/training.py
+    outs:
+    - models/linear_model.pkl
+    metrics:
+    - metrics/metrics.json:
+        cache: false

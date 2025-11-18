@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python src/train/training.py --config configs/trial_1.yaml
+    deps:
+    - path: configs/trial_1.yaml
+      hash: md5
+      md5: b24a330dd5325a0eab55dba7dd1611dc
+      size: 103
+    - path: data/initial_data/target.csv
+      hash: md5
+      md5: 8dd4a468d94094f76af83d91a64a900e
+      size: 2955
+    - path: data/prepared_data/prepared_data.csv
+      hash: md5
+      md5: 8918c47ff213ee74f4eb74365b3aa7e3
+      size: 85185
+    - path: src/train/training.py
+      hash: md5
+      md5: c1349fc9eddb0c0d8f07dcac750c04f5
+      size: 2695
+    outs:
+    - path: metrics/metrics.json
+      hash: md5
+      md5: 70a7be5486dc0baf51a4445a59e7afdd
+      size: 121
+    - path: models/linear_model.pkl
+      hash: md5
+      md5: 9b225e6e65cc1bc4587699e1643e8a84
+      size: 746
