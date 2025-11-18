@@ -1,15 +1,26 @@
 import os
 from pathlib import Path
-
 import pandas as pd
 from sklearn import datasets
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
 
 # Текущая рабочая директория (корень проекта)
 if __name__ == "__main__":
     BASE_DIR = Path(os.getcwd())
     DATA_DIR = BASE_DIR / "data/initial_data" 
 
-    DATA_DIR.mkdir(exist_ok=True)
+    
+    os.makedirs(DATA_DIR, exist_ok= True)
+
+    logger.info(f'Data downloaded in {DATA_DIR}')
+    #print(DATA_DIR)
+    #DATA_DIR.mkdir(exist_ok=True)
 
     dataset = datasets.load_diabetes()
 

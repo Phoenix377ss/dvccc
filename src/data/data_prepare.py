@@ -22,6 +22,9 @@ if __name__ == "__main__":
     INITIAL_DATA_DIR = BASE_DIR / "data/initial_data" 
     DATA_DIR = BASE_DIR / "data/prepared_data" 
 
+    os.makedirs(DATA_DIR, exist_ok= True)
+    #DATA_DIR.mkdir(exist_ok=True)
+    
     dataset = pd.read_csv(INITIAL_DATA_DIR / "initial_data.csv")
     prepared_dataset = fillna(dataset=dataset)
     prepared_dataset.to_csv(DATA_DIR / "prepared_data.csv", index=False)
