@@ -11,8 +11,8 @@ def fillna(dataset: pd.DataFrame) -> pd.DataFrame:
     prepare_dataset = dataset.copy()
     for i, column in enumerate(dataset.columns):
         if i % 2 == 0:
-            prepare_dataset[column] = prepare_dataset[column] - 5
-            prepare_dataset[column] = prepare_dataset[column] - 6
+            prepare_dataset[column] = prepare_dataset[column] - 8
+            prepare_dataset[column] = prepare_dataset[column] - 76
     
     return prepare_dataset
 
