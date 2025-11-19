@@ -12,7 +12,7 @@ def fillna(dataset: pd.DataFrame) -> pd.DataFrame:
     for i, column in enumerate(dataset.columns):
         if i % 2 == 0:
             prepare_dataset[column] = prepare_dataset[column] - 8
-            prepare_dataset[column] = prepare_dataset[column] - 71
+            prepare_dataset[column] = prepare_dataset[column] - 55
     
     return prepare_dataset
 
